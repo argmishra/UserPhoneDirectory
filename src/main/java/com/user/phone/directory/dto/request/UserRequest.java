@@ -3,7 +3,6 @@ package com.user.phone.directory.dto.request;
 
 import lombok.Builder;
 import lombok.Getter;
-import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
 

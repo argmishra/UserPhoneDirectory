@@ -3,7 +3,6 @@ package com.user.phone.directory.convertor;
 import com.user.phone.directory.dto.request.UserRequest;
 import com.user.phone.directory.dto.response.UserResponse;
 import com.user.phone.directory.model.User;
-import lombok.NoArgsConstructor;
 import org.apache.commons.lang3.RandomStringUtils;
 
 import java.util.ArrayList;
