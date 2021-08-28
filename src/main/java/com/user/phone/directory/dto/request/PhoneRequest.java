@@ -17,6 +17,7 @@ public class PhoneRequest {
   @NotBlank
   private String phoneNumber;
 
+  @NotBlank
   private PhoneEnum phoneModel;
 
 }
