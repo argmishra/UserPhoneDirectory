@@ -1,6 +1,10 @@
 User Phone Directory
 ==========  
         
+## Prerequisite
+1. Username = user
+2. Password = password
+
 ## Summary
 
 Create a Spring Boot RESTful Web Service application that will be used to manage two data types: 
@@ -60,7 +64,6 @@ Things to consider for your application
 4. Documentation 
 5. Running instructions
 
-
 ## Solution
 1. Add User - Implemented  
 2. Delete User - Implemented
@@ -73,25 +76,25 @@ Things to consider for your application
 9. Swagger Integration - Implemented (http://localhost:8080/swagger-ui.html)
 10. Generic Exception Handling and Validations - Implemented
 11. In Memory Database - Implemented
-12. Run Script - Implemented
+12. Run Script - Implemented (In bin folder)
 13. Unit Testing - Implemented
-14. Integration Testing - 
+14. Integration Testing - Implemented
 15. Code Coverage - Implemented
-16. Basic Authentication - 
+16. Basic Authentication - Implemented
 
 ```curl
-curl -X POST "http://localhost:8080/users" -H "Content-Type: application/json" -d '{ "userName":"anurag", "emailAddress":"anurag@example.com", "preferredPhoneNumber":"+353881234567" }'
+curl -k -v -u "user:password" -X POST "http://localhost:8080/users" -H "Content-Type: application/json" -d '{ "userName":"anurag", "emailAddress":"anurag@example.com", "preferredPhoneNumber":"+353881234567" }'
 
-curl -X GET "http://localhost:8080/users"
+curl -k -v -u "user:password" -X GET "http://localhost:8080/users"
 
-curl -X DELETE "http://localhost:8080/users/7f000101-7b85-11e2-817b-8542026e0000"
+curl -k -v -u "user:password" -X DELETE "http://localhost:8080/users/7f000101-7b8c-1974-817b-8ca99f580000"
 
-curl -X POST "http://localhost:8080/users/7f000101-7b85-11e2-817b-8542026e0000/phone" -H "Content-Type: application/json" -d '{ "phoneName":"Nigma", "phoneModel":"ANDROID", "phoneNumber":"+353 94188847829" }'
+curl -k -v -u "user:password" -X POST "http://localhost:8080/users/7f000101-7b8c-1974-817b-8ca99f580000/phone" -H "Content-Type: application/json" -d '{ "phoneName":"Nigma", "phoneModel":"ANDROID", "phoneNumber":"+353 94188847829" }'
 
-curl -X GET "http://localhost:8080/users/7f000101-7b85-11e2-817b-8542026e0000/phone"
+curl -k -v -u "user:password" -X GET "http://localhost:8080/users/7f000101-7b8c-1974-817b-8ca99f580000/phone"
 
-curl -X DELETE "http://localhost:8080/phones/7f000101-7b85-1c0b-817b-853cc6ae0002"
+curl -k -v -u "user:password" -X DELETE "http://localhost:8080/phones/7f000101-7b8c-1974-817b-8caa06290001"
 
-curl -X PUT "http://localhost:8080/phones/7f000101-7b85-1c0b-817b-853cc6ae0002" -H "Content-Type: application/json" -d '{ "phoneName":"Grimloack", "phoneModel":"IPHONE", "phoneNumber":"+353 946077680" }'
+curl -k -v -u "user:password" -X PUT "http://localhost:8080/phones/7f000101-7b8c-1974-817b-8caa06290001" -H "Content-Type: application/json" -d '{ "phoneName":"Grimloack", "phoneModel":"IPHONE", "phoneNumber":"+353 946077680" }'
 ```
 

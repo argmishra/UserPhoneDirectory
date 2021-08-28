@@ -13,7 +13,7 @@ public class UserConverter {
 
   public static User toUser(UserRequest request) {
     return User.builder().userName(request.getUserName()).emailAddress(request.getEmailAddress())
-        .password(RandomStringUtils.randomAlphanumeric(5))
+        .password(RandomStringUtils.randomAlphanumeric(10))
         .preferredPhoneNumber(request.getPreferredPhoneNumber()).build();
   }
 

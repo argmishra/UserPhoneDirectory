@@ -39,8 +39,6 @@ public class PhoneControllerTests {
 
   private PhoneResponse phoneResponse;
 
-  private final UUID userId = UUID.randomUUID();
-
   private final UUID phoneId = UUID.randomUUID();
 
   @BeforeEach

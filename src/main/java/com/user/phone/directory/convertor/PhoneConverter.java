@@ -2,7 +2,6 @@ package com.user.phone.directory.convertor;
 
 import com.user.phone.directory.dto.request.PhoneRequest;
 import com.user.phone.directory.dto.response.PhoneResponse;
-import com.user.phone.directory.enums.PhoneEnum;
 import com.user.phone.directory.model.Phone;
 import com.user.phone.directory.model.User;
 
@@ -12,7 +11,7 @@ import java.util.List;
 public class PhoneConverter {
 
   public static Phone toPhone(PhoneRequest request, User user) {
-    return Phone.builder().phoneModel(PhoneEnum.IPHONE).phoneName(request.getPhoneName())
+    return Phone.builder().phoneModel(request.getPhoneModel()).phoneName(request.getPhoneName())
         .phoneNumber(request.getPhoneNumber()).user(user).build();
   }
 
